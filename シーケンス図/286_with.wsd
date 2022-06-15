@@ -1,0 +1,15 @@
+@startuml 281_with
+actor ユーザ
+boundary ブラウザ
+control web.php
+control BoardController
+entity Board
+boundary board.index.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[board]
+ブラウザ -> web.php: GET[board]
+web.php -> BoardController:@index
+BoardController -> Board:with()->get()
+BoardController <-- Board
+BoardController -> board.index.blade:['items' => $items]
+@enduml

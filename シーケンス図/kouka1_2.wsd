@@ -1,0 +1,26 @@
+@startuml kouka1_2
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Kouka1_2Controller
+boundary input.blade.php
+control Kouka1_2Request
+boundary output.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/kouka1_2]
+ブラウザ -> web.php: GET[/kouka1_2]
+web.php -> Kouka1_2Controller:@index
+Kouka1_2Controller -> input.blade.php
+
+ユーザ -> input.blade.php:送信ボタンを押下
+input.blade.php -> web.php:POST
+web.php -> Kouka1_2Controller:@post
+Kouka1_2Controller -> Kouka1_2Request:フォームリクエスト
+Kouka1_2Controller <-- Kouka1_2Request
+
+alt 成功
+Kouka1_2Controller -> output.blade.php
+else エラー発生
+Kouka1_2Controller -> input.blade.php
+end
+@enduml

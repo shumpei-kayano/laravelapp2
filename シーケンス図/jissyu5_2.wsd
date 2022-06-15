@@ -1,0 +1,48 @@
+@startuml jissyu5_2
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jissyu5_2Controller
+boundary index.blade.php
+boundary show.blade.php
+boundary add.blade.php
+boundary edit.blade.php
+boundary del.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu11]
+ブラウザ -> web.php: GET[/jissyu11]
+web.php -> Jissyu5_2Controller:@index
+Jissyu5_2Controller -> index.blade.php
+
+ユーザ -> index.blade.php:詳細リンクを押下
+index.blade.php -> web.php:GET[/jissyu11/show]
+web.php -> Jissyu5_2Controller:@show
+Jissyu5_2Controller -> show.blade.php
+
+ユーザ -> index.blade.php:新規登録リンクを押下
+index.blade.php -> web.php:GET[/jissyu11/add]
+web.php -> Jissyu5_2Controller:@add
+Jissyu5_2Controller -> add.blade.php
+ユーザ -> add.blade.php:新規登録ボタンを押下
+add.blade.php -> web.php:POST[/jissyu11/create]
+web.php -> Jissyu5_2Controller:@create
+Jissyu5_2Controller -> index.blade.php
+
+ユーザ -> index.blade.php:更新リンクを押下
+index.blade.php -> web.php:GET[/jissyu11/edit]
+web.php -> Jissyu5_2Controller:@edit
+Jissyu5_2Controller -> edit.blade.php
+ユーザ -> edit.blade.php:更新ボタンを押下
+edit.blade.php -> web.php:POST[/jissyu11/update]
+web.php -> Jissyu5_2Controller:@update
+Jissyu5_2Controller -> index.blade.php
+
+ユーザ -> index.blade.php:削除リンクを押下
+index.blade.php -> web.php:GET[/jissyu11/del]
+web.php -> Jissyu5_2Controller:@del
+Jissyu5_2Controller -> del.blade.php
+ユーザ -> del.blade.php:削除ボタンを押下
+del.blade.php -> web.php:POST[/jissyu11/remove]
+web.php -> Jissyu5_2Controller:@remove
+Jissyu5_2Controller -> index.blade.php
+@enduml

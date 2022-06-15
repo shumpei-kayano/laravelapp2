@@ -1,0 +1,17 @@
+@startuml 334_auth
+actor ユーザ
+boundary ブラウザ
+control web.php
+boundary welcome.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/]
+ブラウザ -> web.php: GET[/]
+web.php -> HelloController:@getAuth
+HelloController -> auth.blade.php:$param = ['message' => 'ログインして下さい。']
+ユーザ -> auth.blade.php:sendボタンを押下
+auth.blade.php -> web.php:POST[hello/auth]
+web.php -> HelloController:@postAuth
+HelloController -> Auth:attempt()
+HelloController <-- Auth
+HelloController -> auth.blade.php:['message' => $msg]
+@enduml

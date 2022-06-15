@@ -1,0 +1,18 @@
+@startuml jissyu3-2
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jissyu3_2Controller
+boundary input.blade.php
+boundary output.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu4]
+ブラウザ -> web.php: GET[/jissyu4]
+web.php -> Jissyu3_2Controller:@index
+Jissyu3_2Controller -> input.blade.php
+
+ユーザ -> input.blade.php:送信ボタンを押下
+input.blade.php -> web.php:POST
+web.php -> Jissyu3_2Controller:@post
+Jissyu3_2Controller -> output.blade.php
+@enduml

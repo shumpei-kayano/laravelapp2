@@ -1,0 +1,24 @@
+@startuml 261_person_edit
+actor ユーザ
+boundary ブラウザ
+control web.php
+control PersonController
+entity Person
+boundary person.edit.blade
+boundary person.index.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[person/edit]
+ブラウザ -> web.php: GET[person/edit]
+web.php -> PersonController:@edit
+PersonController -> person.edit.blade
+ユーザ -> person.edit.blade:sendボタン押下
+person.edit.blade -> web.php:POST
+web.php -> PersonController:@update
+PersonController -> Person:find()
+PersonController <-- Person:
+PersonController -> web.php:リダイレクト[/person]
+web.php -> PersonController:@index
+PersonController -> Person:all()
+PersonController <-- Person
+PersonController -> person.index.blade
+@enduml

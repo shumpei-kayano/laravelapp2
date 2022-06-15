@@ -1,0 +1,53 @@
+@startuml jissyu6_5
+actor ユーザ
+boundary ブラウザ
+control web.php
+control jissyu6_5Controller
+entity Person
+boundary index.blade.php
+entity Subject
+boundary show.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu16]
+ブラウザ -> web.php: GET[/jissyu16]
+web.php -> jissyu6_5Controller:@index
+jissyu6_5Controller -> Person:all()
+jissyu6_5Controller <-- Person:
+jissyu6_5Controller -> index.blade.php
+index.blade.php -> Person:$item->subject->getdata()
+Person -> Subject:$this->hasone()
+Person <-- Subject:
+index.blade.php <-- Person
+
+ユーザ -> index.blade.php:hasmanyリンクを押下
+index.blade.php -> web.php:GET[/Jissyu16/show]
+web.php -> jissyu6_5Controller:@show
+jissyu6_5Controller -> Person:all()
+jissyu6_5Controller <-- Person:
+jissyu6_5Controller -> show.blade.php
+show.blade.php -> Person:$item->subjects->getdata()
+Person -> Subject:$this->hasmany()
+Person <-- Subject:
+show.blade.php <-- Person
+@enduml
+
+@startuml Person Subject
+left to right direction
+class Person{
+    -id
+    -name
+    -age
+    +テーブルに表示する()getData()
+    +subjectsテーブルと1対1で結合する():subject()
+    +subjectsテーブルと1対多で結合する():subjects()
+}
+
+class Subject{
+    -id
+    -person_id
+    -name
+    +テーブルに表示する():getData()
+}
+
+Person "1"--"*" Subject
+@enduml

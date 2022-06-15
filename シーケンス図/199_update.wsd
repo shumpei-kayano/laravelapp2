@@ -1,0 +1,17 @@
+@startuml 196_insert
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+boundary hello.edit.blade
+boundary hello.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[hello/edit?id=番号]
+ブラウザ -> web.php: GET[hello/edit]
+web.php -> HelloController:@edit
+HelloController -> hello.edit.blade
+ユーザ -> hello.edit.blade:sendボタン押下
+hello.edit.blade -> web.php:POST[hello/edit]
+web.php -> HelloController:@update
+HelloController -> hello.blade
+@enduml

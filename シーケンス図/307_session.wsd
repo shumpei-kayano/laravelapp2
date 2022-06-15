@@ -1,0 +1,18 @@
+@startuml 307_session
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+boundary session.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[hello/session]
+ブラウザ -> web.php: GET[hello/session]
+web.php -> HelloController:@ses_get
+HelloController -> session.blade.php:['session_data' => $sesdata]
+ユーザ -> session.blade.php:sendボタンを押下
+session.blade.php -> web.php:POST[hello/session]
+web.php -> HelloController:@ses_put
+HelloController -> web.php:GET[hello/session]
+web.php -> HelloController:@ses_get
+HelloController -> session.blade.php:['session_data' => $sesdata]
+@enduml

@@ -1,0 +1,24 @@
+@startuml jissyu6_1
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jissyu6_1Controller
+entity Person
+boundary index.blade.php
+boundary show.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu13]
+ブラウザ -> web.php: GET[/jissyu13]
+web.php -> Jissyu6_1Controller:@index
+Jissyu6_1Controller -> Person:all()
+Jissyu6_1Controller <-- Person
+Jissyu6_1Controller -> index.blade.php
+
+ユーザ -> ブラウザ:検索ボタンを押下
+ブラウザ -> web.php: GET[/jissyu13/find]
+web.php -> Jissyu6_1Controller:@find
+Jissyu6_1Controller -> Person:where()->first()
+Jissyu6_1Controller <-- Person
+Jissyu6_1Controller -> show.blade.php
+
+@enduml

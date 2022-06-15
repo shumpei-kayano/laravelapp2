@@ -1,0 +1,11 @@
+@startuml 44_hello_index
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello/{id?}/{pass?}]
+ブラウザ -> web.php: GET[/hello/{id?}/{pass?}]
+web.php -> HelloController:@index
+HelloController -> ブラウザ:
+@enduml

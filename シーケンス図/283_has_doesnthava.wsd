@@ -1,0 +1,17 @@
+@startuml 283_has_doesnthave
+actor ユーザ
+boundary ブラウザ
+control web.php
+control PersonController
+entity Person
+boundary person.index.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[person]
+ブラウザ -> web.php: GET[person]
+web.php -> PersonController:@index
+PersonController -> Person:has()->get()
+PersonController <-- Person
+PersonController -> Person:doesntHave()->get()
+PersonController <-- Person
+PersonController -> person.index.blade:$param
+@enduml

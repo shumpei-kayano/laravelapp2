@@ -1,0 +1,28 @@
+@startuml jissyu4_3
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jissyu4_3Controller
+boundary input.blade.php
+control Jissyu4_3Request
+control Jissyu4_3Myrule
+boundary output.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu8]
+ブラウザ -> web.php: GET[/jissyu8]
+web.php -> Jissyu4_3Controller:@index
+Jissyu4_3Controller -> input.blade.php
+
+ユーザ -> input.blade.php:送信ボタンを押下
+input.blade.php -> web.php:POST
+web.php -> Jissyu4_3Request:フォームリクエスト
+Jissyu4_3Request -> Jissyu4_3Myrule:マイルール呼び出し
+Jissyu4_3Request <-- Jissyu4_3Myrule
+web.php <-- Jissyu4_3Request
+web.php -> Jissyu4_3Controller:@post
+alt 成功
+Jissyu4_3Controller -> output.blade.php
+else エラー発生
+Jissyu4_3Controller -> input.blade.php
+end
+@enduml

@@ -1,0 +1,24 @@
+@startuml 261_person_del
+actor ユーザ
+boundary ブラウザ
+control web.php
+control PersonController
+entity Person
+boundary person.del.blade
+boundary person.index.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[person/del]
+ブラウザ -> web.php: GET[person/del]
+web.php -> PersonController:@del
+PersonController -> person.del.blade
+ユーザ -> person.del.blade:sendボタン押下
+person.del.blade -> web.php:POST
+web.php -> PersonController:@remove
+PersonController -> Person:delete()
+PersonController <-- Person:
+PersonController -> web.php:リダイレクト[/person]
+web.php -> PersonController:@index
+PersonController -> Person:all()
+PersonController <-- Person
+PersonController -> person.index.blade
+@enduml

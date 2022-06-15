@@ -1,0 +1,9 @@
+@startuml 35_hello_msg
+actor ユーザ
+boundary ブラウザ
+control web.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello/{msg}]
+ブラウザ -> web.php: GET[/hello/{msg}]
+web.php -> ブラウザ
+@enduml

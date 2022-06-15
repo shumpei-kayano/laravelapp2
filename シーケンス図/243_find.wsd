@@ -1,0 +1,21 @@
+@startuml 243_find
+actor ユーザ
+boundary ブラウザ
+control web.php
+control PersonController
+entity Person
+boundary person.find.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[person/find]
+ブラウザ -> web.php: GET[person/find]
+web.php -> PersonController:@find
+PersonController -> person.find.blade
+ユーザ -> person.find.blade:findボタン押下
+person.find.blade -> web.php:POST
+web.php -> PersonController:@search
+PersonController -> Person:find()
+PersonController <-- Person:
+PersonController -> person.find.blade
+person.find.blade -> Person:getData()
+person.find.blade <-- Person:
+@enduml

@@ -1,0 +1,12 @@
+@startuml 207_show
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+boundary hello.show.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[hello/show?id=番号]
+ブラウザ -> web.php: GET[hello/show?id=番号]
+web.php -> HelloController:@show
+HelloController -> hello.show.blade
+@enduml

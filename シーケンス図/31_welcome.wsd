@@ -1,0 +1,10 @@
+@startuml 31_welcome
+actor ユーザ
+boundary ブラウザ
+control web.php
+boundary welcome.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/]
+ブラウザ -> web.php: GET[/]
+web.php -> welcome.blade
+@enduml

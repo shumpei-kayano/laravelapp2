@@ -1,0 +1,29 @@
+@startuml 271_board
+actor ユーザ
+boundary ブラウザ
+control web.php
+control BoardController
+entity Board
+boundary board.add.blade
+boundary board.index.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[board/add]
+ブラウザ -> web.php: GET[board/add]
+web.php -> BoardController:@add
+BoardController -> board.add.blade
+ユーザ -> board.add.blade:sendボタンを押下
+board.add.blade -> web.php:POST[board/add]
+web.php -> BoardController:@create
+BoardController -> Board:all()
+BoardController <-- Board
+BoardController -> Board:save()
+BoardController <-- Board
+BoardController -> web.php:GET[board]
+web.php -> BoardController:@index
+BoardController -> Board:all()
+BoardController <-- Board
+BoardController -> board.index.blade
+board.index.blade -> Board:getData()
+board.index.blade <-- Board
+
+@enduml

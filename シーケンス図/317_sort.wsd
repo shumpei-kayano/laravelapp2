@@ -1,0 +1,15 @@
+@startuml 317_sort
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+entity Person
+boundary index.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[hello?sort=age]
+ブラウザ -> web.php: GET[hello?sort=age]
+web.php -> HelloController:@index
+HelloController -> Person:orderBy($sort, 'asc')->simplePaginate(5);
+HelloController <-- Person
+HelloController -> index.blade.php:['items' => $items, 'sort' => $sort]
+@enduml

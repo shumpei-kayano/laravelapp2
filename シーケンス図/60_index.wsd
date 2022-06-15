@@ -1,0 +1,11 @@
+@startuml 60_index
+actor ユーザ
+boundary ブラウザ
+control web.php
+boundary index.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello]
+ブラウザ -> web.php: GET[/hello]
+web.php -> index.blade.php
+
+@enduml

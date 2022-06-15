@@ -1,0 +1,16 @@
+@startuml 202_delete
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+boundary hello.del.blade
+
+ユーザ -> ブラウザ:該当ページをリクエスト[hello/del?id=番号]
+ブラウザ -> web.php: GET[hello/del]
+web.php -> HelloController:@del
+HelloController -> hello.del.blade
+ユーザ -> hello.del.blade:sendボタン押下
+hello.del.blade -> web.php:POST[hello/remove]
+web.php -> HelloController:@remove
+HelloController -> hello.del.blade
+@enduml

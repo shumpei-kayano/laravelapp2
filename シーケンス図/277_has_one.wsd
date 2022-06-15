@@ -1,0 +1,21 @@
+@startuml 277_has_one
+actor ユーザ
+boundary ブラウザ
+control web.php
+control PersonController
+entity Person
+boundary person.index.blade
+entity Board
+
+ユーザ -> ブラウザ:該当ページをリクエスト[person]
+ブラウザ -> web.php: GET[person]
+web.php -> PersonController:@index
+PersonController -> Person:all()
+PersonController <-- Person
+PersonController -> person.index.blade
+person.index.blade -> Person:getData()
+person.index.blade <-- Person
+person.index.blade -> Board:getData()
+person.index.blade <-- Board
+
+@enduml

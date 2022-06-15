@@ -1,0 +1,19 @@
+@startuml 299_RESTful
+actor ユーザ
+boundary ブラウザ
+control web.php
+control RestappController
+entity Restdata
+
+ユーザ -> ブラウザ:該当ページをリクエスト[rest]
+ブラウザ -> web.php: GET[rest]
+web.php -> RestappController:@index
+RestappController -> Restdata:all()
+RestappController <-- Restdata
+
+ユーザ -> ブラウザ:該当ページをリクエスト[rest?id=番号]
+ブラウザ -> web.php: GET[rest?id=番号]
+web.php -> RestappController:@show
+RestappController -> Restdata:find()
+RestappController <-- Restdata
+@enduml

@@ -1,0 +1,11 @@
+@startuml 50_invoke
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello]
+ブラウザ -> web.php: GET[/hello]
+web.php -> HelloController:__invoke
+HelloController -> ブラウザ:
+@enduml

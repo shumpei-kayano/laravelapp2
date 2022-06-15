@@ -1,0 +1,73 @@
+@startuml jissyu7_1
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jissyu7_1Controller
+entity Person
+boundary index.blade.php
+boundary show.blade.php
+boundary create.blade.php
+boundary edit.blade.php
+boundary del.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/Jissyu7_1]
+ブラウザ -> web.php: GET[/Jissyu7_1]
+web.php -> Jissyu7_1Controller:@index
+Jissyu7_1Controller -> Person:all()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> index.blade.php
+
+ユーザ -> index.blade.php:検索ボタンを押下
+index.blade.php -> web.php:POST[/Jissyu7_1/find]
+web.php -> Jissyu7_1Controller:@find
+Jissyu7_1Controller -> Person:where()->first()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> show.blade.php
+
+ユーザ -> index.blade.php:詳細リンクを押下
+index.blade.php -> web.php:GET[/Jissyu7_1/番号]
+web.php -> Jissyu7_1Controller:@show
+Jissyu7_1Controller -> Person:where()->first()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> show.blade.php
+
+ユーザ -> index.blade.php:新規登録リンクを押下
+index.blade.php -> web.php:GET[/Jissyu7_1/create]
+web.php -> Jissyu7_1Controller:@create
+Jissyu7_1Controller -> create.blade.php
+
+ユーザ -> create.blade.php:新規登録ボタンを押下
+create.blade.php -> web.php:POST[/Jissyu7_1]
+web.php -> Jissyu7_1Controller:@store
+Jissyu7_1Controller -> Person:all()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> index.blade.php
+
+ユーザ -> index.blade.php:更新リンクを押下
+index.blade.php -> web.php:GET[/Jissyu7_1/番号/edit]
+web.php -> Jissyu7_1Controller:@edit
+Jissyu7_1Controller -> Person:find()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> edit.blade.php
+
+ユーザ -> edit.blade.php:更新ボタンを押下
+edit.blade.php -> web.php:PUT[/Jissyu7_1/番号]
+web.php -> Jissyu7_1Controller:@update
+Jissyu7_1Controller -> Person:find()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> index.blade.php
+
+ユーザ -> index.blade.php:削除リンクを押下
+index.blade.php -> web.php:GET[/Jissyu7_1/番号/del]
+web.php -> Jissyu7_1Controller:@del
+Jissyu7_1Controller -> Person:find()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> del.blade.php
+
+ユーザ -> edit.blade.php:削除ボタンを押下
+edit.blade.php -> web.php:DELETE[/Jissyu7_1/番号]
+web.php -> Jissyu7_1Controller:@destroy
+Jissyu7_1Controller -> Person:find()->delete()
+Jissyu7_1Controller <- Person
+Jissyu7_1Controller -> index.blade.php
+@enduml

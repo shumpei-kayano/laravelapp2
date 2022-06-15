@@ -1,0 +1,9 @@
+@startuml 33_hello
+actor ユーザ
+boundary ブラウザ
+control web.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello]
+ブラウザ -> web.php: GET[/hello]
+web.php -> ブラウザ
+@enduml

@@ -1,0 +1,29 @@
+@startuml jissyu6_4
+actor ユーザ
+boundary ブラウザ
+control web.php
+control jissyu6_4Controller
+entity Subject
+boundary index.blade.php
+boundary add.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/jissyu15]
+ブラウザ -> web.php: GET[/jissyu15]
+web.php -> jissyu6_4Controller:@index
+jissyu6_4Controller -> Subject:all()
+jissyu6_4Controller <-- Subject:
+jissyu6_4Controller -> index.blade.php
+
+ユーザ -> index.blade.php:新規登録リンクを押下
+index.blade.php -> web.php:GET[/Jissyu15/add]
+web.php -> jissyu6_4Controller:@add
+jissyu6_4Controller -> add.blade.php
+
+ユーザ -> add.blade.php:新規登録ボタンを押下
+add.blade.php -> web.php:POST[/Jissyu15/create]
+web.php -> jissyu6_4Controller:@create
+jissyu6_4Controller -> Subject:->fill()->save()
+jissyu6_4Controller <-- Subject:
+jissyu6_4Controller -> index.blade.php
+
+@enduml

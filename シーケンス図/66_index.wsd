@@ -1,0 +1,12 @@
+@startuml 66_index
+actor ユーザ
+boundary ブラウザ
+control web.php
+control HelloController
+boundary index.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/hello?id=xxx]
+ブラウザ -> web.php: GET[/hello?id=xxx]
+web.php -> HelloController:@index
+HelloController -> index.php:$data = ['msg'=>'これは...','id'=>$request->id]
+@enduml
