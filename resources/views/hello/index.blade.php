@@ -1,5 +1,4 @@
 @extends('layouts.helloapp')
-       //↑layoutsフォルダのhelloapp.blade.phpを表している
 
 @section('title', 'Index')
 
@@ -11,6 +10,11 @@
 @section('content')
    <p>ここが本文のコンテンツです。</p>
    <p>必要なだけ記述できます。</p>
+
+   <ul>
+      @each('components.item', $data,'item')
+   </ul>
+
 @endsection
 
 @section('footer')
