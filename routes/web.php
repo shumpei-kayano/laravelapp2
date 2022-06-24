@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\HelloMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,8 @@ return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
 
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
+
 Route::post('hello', 'HelloController@post');
 
 //----実習用-----
