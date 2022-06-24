@@ -18,8 +18,7 @@ return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
 
-Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
-
+Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
 //----実習用-----
