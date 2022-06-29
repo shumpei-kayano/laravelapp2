@@ -33,8 +33,9 @@ Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
 
 //ブランチテスト
-//ブランチテスト２
 //ブランチテスト３
 //ブランチテスト４
+//ブランチテスト５
+
 
     
