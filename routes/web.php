@@ -25,10 +25,13 @@ Route::post('hello', 'HelloController@post');
 Route::get('hello/add', 'HelloController@add');
 Route::post('hello/add', 'HelloController@create');
 
+
  //---------データの更新----------
  Route::get('hello/edit', 'HelloController@edit');
  Route::post('hello/edit', 'HelloController@update');
  
+ Route::get('hello/show', 'HelloController@show');
+
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
