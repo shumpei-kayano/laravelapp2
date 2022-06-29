@@ -21,6 +21,9 @@ return view('welcome');
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
+Route::get('hello/add', 'HelloController@add');
+Route::post('hello/add', 'HelloController@create');
+
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
@@ -32,10 +35,7 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
 
-//ブランチテスト
-//ブランチテスト３
-//ブランチテスト４
-//ブランチテスト５
+
 
 
     
