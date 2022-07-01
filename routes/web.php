@@ -17,9 +17,13 @@ Route::get('/', function () {
 return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
-
+//----------トップページの表示-----------
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
+
+//----------データの挿入-----------
+Route::get('hello/add', 'HelloController@add');
+Route::post('hello/add', 'HelloController@create');
 
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
