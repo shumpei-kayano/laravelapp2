@@ -22,4 +22,10 @@ class Person extends Model
    {
       return $this->id . ': ' . $this->name . ' (' . $this->age . ')';
    }
+
+   //リレーションの設定
+   public function board()
+    {
+    return $this->hasOne('App\Board');
+    }
 }
