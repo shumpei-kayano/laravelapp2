@@ -36,6 +36,9 @@ Route::post('hello/add', 'HelloController@create');
 
  Route::get('hello/show', 'HelloController@show');
 
+ //----------Person-------------
+ Route::get('person', 'PersonController@index');
+
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
