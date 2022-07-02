@@ -24,8 +24,8 @@ class Person extends Model
    }
 
    //リレーションの設定
-   public function board()
+   public function boards()
     {
-    return $this->hasOne('App\Board');
+    return $this->hasMany('App\Board');
     }
 }
