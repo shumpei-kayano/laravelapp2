@@ -45,6 +45,10 @@ Route::post('hello/add', 'HelloController@create');
  Route::get('person/add', 'PersonController@add');
  Route::post('person/add', 'PersonController@create');
 
+ Route::get('person/edit', 'PersonController@edit');
+ Route::post('person/edit', 'PersonController@update');
+
+
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
