@@ -56,6 +56,9 @@ Route::post('hello/add', 'HelloController@create');
 
  Route::get('board/add', 'BoardController@add');
  Route::post('board/add', 'BoardController@create');
+
+ //----------RESTful-------------
+ Route::resouece('rest', 'RestappController'); //7つのアクションの登録
   
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
