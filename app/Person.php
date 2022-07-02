@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Person extends Model
 {
@@ -11,4 +12,5 @@ class Person extends Model
         //test
         return $this->id . ': ' . $this->name . ' (' . $this->age . ')';
     }
+
 }
