@@ -1,5 +1,8 @@
 @extends('layouts.helloapp')
-
+<style>
+   .pagination { font-size:10pt; }
+   .pagination li { display:inline-block }
+</style>
 @section('title', 'Index')
 
 @section('menubar')
@@ -8,16 +11,17 @@
 @endsection
 
 @section('content')
-   @if ($items != null)
-       @foreach($items as $item)
-       <table width="400px">
-       <tr><th width="50px">id:</th>
-       <td width="50px">{{$item->id}}</td>
-       <th width="50px">name:</th>
-       <td>{{$item->name}}</td></tr>
-       </table>
-       @endforeach
-   @endif
+   <table>
+   <tr><th>Name</th><th>Mail</th><th>Age</th></tr>
+   @foreach ($items as $item)
+       <tr>
+           <td>{{$item->name}}</td>
+           <td>{{$item->mail}}</td>
+           <td>{{$item->age}}</td>
+       </tr>
+   @endforeach
+   </table>
+   {{ $items->links() }}
 @endsection
 
 @section('footer')
