@@ -14,25 +14,19 @@ class RestappController extends Controller
        return $items->toArray();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //データの登録
     public function create()
     {
-        //
+       return view('rest.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+       $restdata = new Restdata;
+       $form = $request->all();
+       unset($form['_token']);
+       $restdata->fill($form)->save();
+       return redirect('/rest');
     }
 
     //レコード表示
