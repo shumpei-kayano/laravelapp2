@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Restdata;
 
 class RestappController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //一覧表示
     public function index()
     {
-        //
+       $items = Restdata::all();
+       return $items->toArray();
     }
 
     /**
@@ -37,15 +35,11 @@ class RestappController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //レコード表示
     public function show($id)
     {
-        //
+       $item = Restdata::find($id);
+       return $item->toArray();
     }
 
     /**
