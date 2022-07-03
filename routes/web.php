@@ -17,7 +17,7 @@ return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
  //---------トップページ----------
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')->middleware('auth');
 Route::post('hello', 'HelloController@post');
 
  //---------データの挿入----------
@@ -63,7 +63,11 @@ Route::post('hello/add', 'HelloController@create');
 //----------セッション-------------
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
-  
+
+//----------認証-------------
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
+
  //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
