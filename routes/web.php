@@ -79,3 +79,6 @@ Route::post('jissyu4', 'Jissyu3_2Controller@post');
 
 
     
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
