@@ -84,4 +84,9 @@ class HelloController extends Controller
        return view('hello.show', ['items' => $items]);
     }
 
+    //---------データの削除----------
+    public function rest(Request $request)
+    {
+    return view('hello.rest');
+    }
 }

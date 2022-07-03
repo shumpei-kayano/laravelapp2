@@ -11,7 +11,6 @@ use App\Http\Middleware\HelloMiddleware;
 |
 */
 
-
 //第１引数　アドレス　第2引数　関数
 Route::get('/', function () {
 return view('welcome');
@@ -59,8 +58,9 @@ Route::post('hello/add', 'HelloController@create');
 
  //----------RESTful-------------
  Route::resource('rest', 'RestappController'); //7つのアクションの登録
-  
-//----実習用-----
+ Route::get('hello/rest', 'HelloController@rest');
+
+ //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
 //jissyu3_1
