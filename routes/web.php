@@ -60,6 +60,10 @@ Route::post('hello/add', 'HelloController@create');
  Route::resource('rest', 'RestappController'); //7つのアクションの登録
  Route::get('hello/rest', 'HelloController@rest');
 
+//----------セッション-------------
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
+  
  //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 

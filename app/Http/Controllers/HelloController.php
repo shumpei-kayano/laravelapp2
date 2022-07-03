@@ -48,15 +48,15 @@ class HelloController extends Controller
 
     public function update(Request $request)
     {
-    $param = [
-        'name' => $request->name,
-        'mail' => $request->mail,
-        'age' => $request->age,
-    ];
-    DB::table('people')
-    ->where('id', $request->id)
-    ->update($param);
-    return redirect('hello');
+        $param = [
+            'name' => $request->name,
+            'mail' => $request->mail,
+            'age' => $request->age,
+        ];
+        DB::table('people')
+        ->where('id', $request->id)
+        ->update($param);
+        return redirect('hello');
     }
 
     //---------データの削除----------
@@ -87,6 +87,20 @@ class HelloController extends Controller
     //---------データの削除----------
     public function rest(Request $request)
     {
-    return view('hello.rest');
+        return view('hello.rest');
+    }
+
+    //---------セッション----------
+    public function ses_get(Request $request)
+    {
+        $sesdata = $request->session()->get('msg');
+        return view('hello.session', ['session_data' => $sesdata]);
+    }
+
+    public function ses_put(Request $request)
+    {
+        $msg = $request->input;
+        $request->session()->put('msg', $msg);
+        return redirect('hello/session');
     }
 }
