@@ -33,6 +33,8 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
+Route::get('hello/show', 'HelloController@show');
+
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
 
@@ -43,7 +45,4 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 //jissyu3_2
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
-
-
-//test
     
