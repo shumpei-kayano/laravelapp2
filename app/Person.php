@@ -10,4 +10,14 @@ class Person extends Model
     {
        return $this->id . ': ' . $this->name . ' (' . $this->age . ')';
     }
+
+    public function scopeAgeGreaterThan($query, $n)
+    {
+        return $query->where('age','>=', $n);
+    }
+
+    public function scopeAgeLessThan($query, $n)
+    {
+        return $query->where('age', '<=', $n);
+    }
 }
