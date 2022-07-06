@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Builder;
 class Person extends Model
 {
     //グローバルスコープ
-    protected static function boot()
-    {
-        parent::boot();
+    // protected static function boot()
+    // {
+    //     parent::boot();
 
-        static::addGlobalScope('age', function (Builder $builder) {
-            $builder->where('age', '>', 20);
-        });
-    }
+    //     static::addGlobalScope('age', function (Builder $builder) {
+    //         $builder->where('age', '>', 20);
+    //     });
+    // }
 
     public function getData()
     {
