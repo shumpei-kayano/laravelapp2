@@ -52,6 +52,12 @@ Route::post('person/edit', 'PersonController@update');
 Route::get('person/del', 'PersonController@delete');
 Route::post('person/del', 'PersonController@remove');
 
+//-------------ORM(Board)--------------
+Route::get('board', 'BoardController@index');
+
+Route::get('board/add', 'BoardController@add');
+Route::post('board/add', 'BoardController@create');
+
 
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
