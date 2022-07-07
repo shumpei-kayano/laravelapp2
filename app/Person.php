@@ -37,4 +37,9 @@ class Person extends Model
     {
         return $query->where('age', '<=', $n);
     }
+    //hasOne結合
+    public function boards()
+    {
+        return $this->hasMany('App\Board');
+    }
 }
