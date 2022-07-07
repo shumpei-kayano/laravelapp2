@@ -45,6 +45,9 @@ Route::post('person/find', 'PersonController@search');
 //新規保存
 Route::get('person/add', 'PersonController@add');
 Route::post('person/add', 'PersonController@create');
+//更新
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
 
 
 //----実習用-----
