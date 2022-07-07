@@ -39,8 +39,12 @@ Route::get('hello/show', 'HelloController@show');
 //-------------ORM(Person)--------------
 Route::get('person', 'PersonController@index'); 
 
+//検索
 Route::get('person/find', 'PersonController@find');
 Route::post('person/find', 'PersonController@search');
+//新規保存
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
 
 
 //----実習用-----
