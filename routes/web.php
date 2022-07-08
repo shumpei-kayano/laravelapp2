@@ -32,10 +32,17 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
 
-//ブランチテスト
-//ブランチテスト３
-//ブランチテスト４
-//ブランチテスト５
+//jissyu5_1
+Route::get('jissyu10', 'Jissyu5_1Controller@index');
+Route::get('jissyu10/show', 'Jissyu5_1Controller@show');
 
-
+//jissyu5_2
+Route::get('jissyu11', 'Jissyu5_2Controller@index');
+Route::get('jissyu11/show', 'Jissyu5_2Controller@show');
+Route::get('jissyu11/add', 'Jissyu5_2Controller@add');
+Route::post('jissyu11/add', 'Jissyu5_2Controller@create');
+Route::get('jissyu11/edit', 'Jissyu5_2Controller@edit');
+Route::post('jissyu11/edit', 'Jissyu5_2Controller@update');
+Route::get('jissyu11/del', 'Jissyu5_2Controller@del');
+Route::post('jissyu11/del', 'Jissyu5_2Controller@remove');
     
