@@ -9,10 +9,11 @@ class BoardController extends Controller
 {
     public function index(Request $request)
     {
-        $items = Board::all();
-        return view('board.index', ['items' => $items]);
+        //Eagerローディング
+       $items = Board::with('person')->get();
+       return view('board.index', ['items' => $items]);
     }
- 
+
     public function add(Request $request)
     {
         return view('board.add');
