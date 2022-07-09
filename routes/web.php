@@ -61,4 +61,15 @@ Route::get('customer', 'Jissyu5_5Controller@index');
 Route::get('customer/add', 'Jissyu5_5Controller@add');
 Route::post('customer/add', 'Jissyu5_5Controller@create');
 
+//jissyu5_6
+Route::get('ensyu1', 'Ensyu1Controller@index');
+Route::get('ensyu1/show', 'Ensyu1Controller@show');
+Route::get('ensyu1/add', 'Ensyu1Controller@add');
+Route::post('ensyu1/create', 'Ensyu1Controller@create');
+Route::get('ensyu1/edit', 'Ensyu1Controller@edit');
+Route::post('ensyu1/update', 'Ensyu1Controller@update');
+Route::get('ensyu1/del', 'Ensyu1Controller@del');
+Route::post('ensyu1/remove', 'Ensyu1Controller@remove');
+
+
 
