@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\Jissyu5_4Request;
+use Validator;
 
 class Jissyu5_3Controller extends Controller
 {
@@ -22,7 +24,7 @@ class Jissyu5_3Controller extends Controller
     {
         return view('jissyu5_3.add');
     }
-    public function create(Request $request)
+    public function create(Jissyu5_4Request $request)
     {
         $param = [
             'name' => $request->name,
@@ -39,6 +41,23 @@ class Jissyu5_3Controller extends Controller
     }
     public function update(Request $request)
     {
+        $rules = [
+            'name' => 'required',
+            'mail' => 'email',
+            'age' => 'numeric|between:0,120'
+        ];
+        $messages = [
+            'name.required' => '名前は必須入力フィールドです。',
+            'mail.email' => '正しいメールアドレスを入力してください。',
+            'age.numeric' => '年齢は整数で入力してください。',
+            'age.between' => '年齢は0〜120の間で入力してください。'
+        ];
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect('/jissyu12/edit?id='.$request->id)//表示にはidが必要なのでクエリ文字を連結
+                    ->withErrors($validator);
+        }
         $param = [
 				'name' => $request->name,
 				'mail' => $request->mail,

@@ -51,7 +51,7 @@ Route::get('jissyu12', 'Jissyu5_3Controller@index');
 Route::get('jissyu12/show', 'Jissyu5_3Controller@show');
 Route::get('jissyu12/add', 'Jissyu5_3Controller@add');
 Route::post('jissyu12/create', 'Jissyu5_3Controller@create');
-Route::get('jissyu12/edit', 'Jissyu5_3Controller@edit');
+Route::get('jissyu12/edit', 'Jissyu5_3Controller@edit')->name('edit');
 Route::post('jissyu12/update', 'Jissyu5_3Controller@update');
 Route::get('jissyu12/del', 'Jissyu5_3Controller@del');
 Route::post('jissyu12/remove', 'Jissyu5_3Controller@remove');

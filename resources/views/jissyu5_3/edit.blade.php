@@ -10,6 +10,11 @@
    <form action="/jissyu12/update" method="post">
    <table>
       @csrf
+      @if (count($errors)>0)
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+      @endif
       <input type="hidden" name="id" value="{{$item->id}}">
       <tr><th>name: </th><td><input type="text" name="name"
          value="{{$item->name}}"></td></tr>
