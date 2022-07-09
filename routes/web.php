@@ -56,3 +56,9 @@ Route::post('jissyu12/update', 'Jissyu5_3Controller@update');
 Route::get('jissyu12/del', 'Jissyu5_3Controller@del');
 Route::post('jissyu12/remove', 'Jissyu5_3Controller@remove');
 
+//jissyu5_5
+Route::get('customer', 'Jissyu5_5Controller@index');
+Route::get('customer/add', 'Jissyu5_5Controller@add');
+Route::post('customer/add', 'Jissyu5_5Controller@create');
+
+
