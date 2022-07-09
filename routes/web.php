@@ -45,4 +45,14 @@ Route::get('jissyu11/edit', 'Jissyu5_2Controller@edit');
 Route::post('jissyu11/edit', 'Jissyu5_2Controller@update');
 Route::get('jissyu11/del', 'Jissyu5_2Controller@del');
 Route::post('jissyu11/del', 'Jissyu5_2Controller@remove');
-    
+
+//jissyu5_3
+Route::get('jissyu12', 'Jissyu5_3Controller@index');
+Route::get('jissyu12/show', 'Jissyu5_3Controller@show');
+Route::get('jissyu12/add', 'Jissyu5_3Controller@add');
+Route::post('jissyu12/create', 'Jissyu5_3Controller@create');
+Route::get('jissyu12/edit', 'Jissyu5_3Controller@edit');
+Route::post('jissyu12/update', 'Jissyu5_3Controller@update');
+Route::get('jissyu12/del', 'Jissyu5_3Controller@del');
+Route::post('jissyu12/remove', 'Jissyu5_3Controller@remove');
+
