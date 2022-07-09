@@ -11,13 +11,8 @@ class HelloController extends Controller
     //-----------トップページの表示-----------
     public function index(Request $request)
     {
-<<<<<<< HEAD
        $items = DB::table('people')->orderBy('age','asc')->get();
        return view('hello.index', ['items' => $items]);
-=======
-        $items = DB::select('select * from people');
-        return view('hello.index', ['items'=>$items]);
->>>>>>> jissyu5
     }
  
     public function post(HelloRequest $request)
