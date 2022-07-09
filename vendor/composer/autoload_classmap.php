@@ -19,8 +19,16 @@ return array(
     'App\\Http\\Controllers\\HelloController' => $baseDir . '/app/Http/Controllers/HelloController.php',
     'App\\Http\\Controllers\\Jissyu3_1Controller' => $baseDir . '/app/Http/Controllers/Jissyu3_1Controller.php',
     'App\\Http\\Controllers\\Jissyu3_2Controller' => $baseDir . '/app/Http/Controllers/Jissyu3_2Controller.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\JissyuController' => $baseDir . '/app/Http/Controllers/JissyuController.php',
     'App\\Http\\Controllers\\PersonController' => $baseDir . '/app/Http/Controllers/PersonController.php',
+=======
+    'App\\Http\\Controllers\\Jissyu5_1Controller' => $baseDir . '/app/Http/Controllers/Jissyu5_1Controller.php',
+    'App\\Http\\Controllers\\Jissyu5_2Controller' => $baseDir . '/app/Http/Controllers/Jissyu5_2Controller.php',
+    'App\\Http\\Controllers\\Jissyu5_3Controller' => $baseDir . '/app/Http/Controllers/Jissyu5_3Controller.php',
+    'App\\Http\\Controllers\\Jissyu5_5Controller' => $baseDir . '/app/Http/Controllers/Jissyu5_5Controller.php',
+    'App\\Http\\Controllers\\JissyuController' => $baseDir . '/app/Http/Controllers/JissyuController.php',
+>>>>>>> jissyu5
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -30,9 +38,16 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
     'App\\Http\\Requests\\HelloRequest' => $baseDir . '/app/Http/Requests/HelloRequest.php',
     'App\\Http\\Validators\\HelloValidator' => $baseDir . '/app/Http/Validators/HelloValidator.php',
     'App\\Person' => $baseDir . '/app/Person.php',
+=======
+    'App\\Http\\Models\\Customer' => $baseDir . '/app/Http/Models/Customer.php',
+    'App\\Http\\Requests\\HelloRequest' => $baseDir . '/app/Http/Requests/HelloRequest.php',
+    'App\\Http\\Requests\\Jissyu5_4Request' => $baseDir . '/app/Http/Requests/Jissyu5_4Request.php',
+    'App\\Http\\Validators\\HelloValidator' => $baseDir . '/app/Http/Validators/HelloValidator.php',
+>>>>>>> jissyu5
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -120,6 +135,7 @@ return array(
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
     'Carbon\\TranslatorImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
     'Carbon\\TranslatorStrongTypeInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
+    'ClientTableSeeder' => $baseDir . '/database/seeds/ClientTableSeeder.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
