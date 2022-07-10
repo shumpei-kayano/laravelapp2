@@ -37,9 +37,21 @@ class Person extends Model
     {
         return $query->where('age', '<=', $n);
     }
-    //hasOne結合
+    //hasMany結合
     public function boards()
     {
         return $this->hasMany('App\Board');
+    }
+
+    //subjectsテーブルとのhasOne結合
+    public function subject()
+    {
+       return $this->hasOne('App\Http\Models\Subject');
+    }
+
+    //subjectsテーブルとのhasMany結合
+    public function subjects()
+    {
+       return $this->hasMany('App\Http\Models\Subject');
     }
 }

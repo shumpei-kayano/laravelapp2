@@ -69,9 +69,6 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 //jissyu3_2
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
-<<<<<<< HEAD
-    
-=======
 
 //jissyu5_1
 Route::get('jissyu10', 'Jissyu5_1Controller@index');
@@ -112,6 +109,32 @@ Route::post('ensyu1/update', 'Ensyu1Controller@update');
 Route::get('ensyu1/del', 'Ensyu1Controller@del');
 Route::post('ensyu1/remove', 'Ensyu1Controller@remove');
 
+//jissyu6_1
+Route::get('jissyu13', 'Jissyu6_1Controller@index');
+Route::post('jissyu13/find', 'Jissyu6_1Controller@find');
 
+//jissyu6_3
+Route::get('jissyu14', 'Jissyu6_3Controller@index');
+Route::post('jissyu14/find', 'Jissyu6_3Controller@find');
+Route::get('jissyu14/show', 'Jissyu6_3Controller@show');
+Route::get('jissyu14/add', 'Jissyu6_3Controller@add');
+Route::post('jissyu14/create', 'Jissyu6_3Controller@create');
+Route::get('jissyu14/edit', 'Jissyu6_3Controller@edit');
+Route::post('jissyu14/update', 'Jissyu6_3Controller@update');
+Route::get('jissyu14/del', 'Jissyu6_3Controller@del');
+Route::post('jissyu14/remove', 'Jissyu6_3Controller@remove');
 
->>>>>>> jissyu5
+//jissyu6_4
+Route::get('jissyu15', 'Jissyu6_4Controller@index');
+Route::get('jissyu15/add', 'Jissyu6_4Controller@add');
+Route::post('jissyu15/create', 'Jissyu6_4Controller@create');
+
+//jissyu6_5
+Route::get('jissyu16', 'Jissyu6_5Controller@index');
+Route::get('jissyu16/show', 'Jissyu6_5Controller@show');
+
+//jissyu6_6
+Route::get('task', 'TaskController@index');
+Route::get('task/add', 'TaskController@add');
+Route::post('task/add', 'TaskController@create');
+Route::post('task/del', 'TaskController@delete');

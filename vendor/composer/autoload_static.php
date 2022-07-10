@@ -421,6 +421,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
     );
 
     public static $classMap = array (
+        'App\\Board' => __DIR__ . '/../..' . '/app/Board.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Composers\\HelloComposer' => __DIR__ . '/../..' . '/app/Http/Composers/HelloComposer.php',
@@ -430,20 +431,23 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\BoardController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Ensyu1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Ensyu1Controller.php',
         'App\\Http\\Controllers\\HelloController' => __DIR__ . '/../..' . '/app/Http/Controllers/HelloController.php',
         'App\\Http\\Controllers\\Jissyu3_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_1Controller.php',
         'App\\Http\\Controllers\\Jissyu3_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_2Controller.php',
-<<<<<<< HEAD
-        'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
-        'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
-=======
         'App\\Http\\Controllers\\Jissyu5_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_1Controller.php',
         'App\\Http\\Controllers\\Jissyu5_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_2Controller.php',
         'App\\Http\\Controllers\\Jissyu5_3Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_3Controller.php',
         'App\\Http\\Controllers\\Jissyu5_5Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_5Controller.php',
+        'App\\Http\\Controllers\\Jissyu6_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu6_1Controller.php',
+        'App\\Http\\Controllers\\Jissyu6_3Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu6_3Controller.php',
+        'App\\Http\\Controllers\\Jissyu6_4Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu6_4Controller.php',
+        'App\\Http\\Controllers\\Jissyu6_5Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu6_5Controller.php',
         'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
->>>>>>> jissyu5
+        'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
+        'App\\Http\\Controllers\\TaskController' => __DIR__ . '/../..' . '/app/Http/Controllers/TaskController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -453,16 +457,12 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-<<<<<<< HEAD
-        'App\\Http\\Requests\\HelloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/HelloRequest.php',
-        'App\\Http\\Validators\\HelloValidator' => __DIR__ . '/../..' . '/app/Http/Validators/HelloValidator.php',
-        'App\\Person' => __DIR__ . '/../..' . '/app/Person.php',
-=======
         'App\\Http\\Models\\Customer' => __DIR__ . '/../..' . '/app/Http/Models/Customer.php',
+        'App\\Http\\Models\\Subject' => __DIR__ . '/../..' . '/app/Http/Models/Subject.php',
         'App\\Http\\Requests\\HelloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/HelloRequest.php',
         'App\\Http\\Requests\\Jissyu5_4Request' => __DIR__ . '/../..' . '/app/Http/Requests/Jissyu5_4Request.php',
         'App\\Http\\Validators\\HelloValidator' => __DIR__ . '/../..' . '/app/Http/Validators/HelloValidator.php',
->>>>>>> jissyu5
+        'App\\Person' => __DIR__ . '/../..' . '/app/Person.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -470,6 +470,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Providers\\HelloServiceProvider' => __DIR__ . '/../..' . '/app/Providers/HelloServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Rules\\Myrule' => __DIR__ . '/../..' . '/app/Rules/Myrule.php',
+        'App\\Task' => __DIR__ . '/../..' . '/app/Task.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Carbon\\AbstractTranslator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/AbstractTranslator.php',
@@ -4001,6 +4002,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'SubjectTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SubjectTableSeeder.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
