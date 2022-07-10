@@ -56,6 +56,9 @@ Route::post('hello/add', 'HelloController@create');
 
  Route::get('board/add', 'BoardController@add');
  Route::post('board/add', 'BoardController@create');
+
+ //----------Restful-------------
+ Route::resource('rest', 'RestappController');
   
 //----実習用-----
 Route::get('jissyu2', 'JissyuController@index');
