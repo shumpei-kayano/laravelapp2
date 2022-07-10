@@ -128,3 +128,7 @@ Route::post('jissyu14/remove', 'Jissyu6_3Controller@remove');
 Route::get('jissyu15', 'Jissyu6_4Controller@index');
 Route::get('jissyu15/add', 'Jissyu6_4Controller@add');
 Route::post('jissyu15/create', 'Jissyu6_4Controller@create');
+
+//jissyu6_5
+Route::get('jissyu16', 'Jissyu6_5Controller@index');
+Route::get('jissyu16/show', 'Jissyu6_5Controller@show');

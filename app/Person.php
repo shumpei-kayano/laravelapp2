@@ -42,4 +42,16 @@ class Person extends Model
     {
         return $this->hasMany('App\Board');
     }
+
+    //subjectsテーブルとのhasOne結合
+    public function subject()
+    {
+       return $this->hasOne('App\Http\Models\Subject');
+    }
+
+    //subjectsテーブルとのhasMany結合
+    public function subjects()
+    {
+       return $this->hasMany('App\Http\Models\Subject');
+    }
 }
