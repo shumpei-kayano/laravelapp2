@@ -132,3 +132,9 @@ Route::post('jissyu15/create', 'Jissyu6_4Controller@create');
 //jissyu6_5
 Route::get('jissyu16', 'Jissyu6_5Controller@index');
 Route::get('jissyu16/show', 'Jissyu6_5Controller@show');
+
+//jissyu6_6
+Route::get('task', 'TaskController@index');
+Route::get('task/add', 'TaskController@add');
+Route::post('task/add', 'TaskController@create');
+Route::post('task/del', 'TaskController@delete');
