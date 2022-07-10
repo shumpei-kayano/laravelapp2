@@ -434,16 +434,11 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Controllers\\HelloController' => __DIR__ . '/../..' . '/app/Http/Controllers/HelloController.php',
         'App\\Http\\Controllers\\Jissyu3_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_1Controller.php',
         'App\\Http\\Controllers\\Jissyu3_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_2Controller.php',
-<<<<<<< HEAD
-        'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
-        'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
-=======
         'App\\Http\\Controllers\\Jissyu5_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_1Controller.php',
         'App\\Http\\Controllers\\Jissyu5_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_2Controller.php',
         'App\\Http\\Controllers\\Jissyu5_3Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_3Controller.php',
         'App\\Http\\Controllers\\Jissyu5_5Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu5_5Controller.php',
         'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
->>>>>>> jissyu5
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -453,16 +448,10 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-<<<<<<< HEAD
-        'App\\Http\\Requests\\HelloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/HelloRequest.php',
-        'App\\Http\\Validators\\HelloValidator' => __DIR__ . '/../..' . '/app/Http/Validators/HelloValidator.php',
-        'App\\Person' => __DIR__ . '/../..' . '/app/Person.php',
-=======
         'App\\Http\\Models\\Customer' => __DIR__ . '/../..' . '/app/Http/Models/Customer.php',
         'App\\Http\\Requests\\HelloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/HelloRequest.php',
         'App\\Http\\Requests\\Jissyu5_4Request' => __DIR__ . '/../..' . '/app/Http/Requests/Jissyu5_4Request.php',
         'App\\Http\\Validators\\HelloValidator' => __DIR__ . '/../..' . '/app/Http/Validators/HelloValidator.php',
->>>>>>> jissyu5
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

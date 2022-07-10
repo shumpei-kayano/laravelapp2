@@ -69,9 +69,6 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 //jissyu3_2
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
-<<<<<<< HEAD
-    
-=======
 
 //jissyu5_1
 Route::get('jissyu10', 'Jissyu5_1Controller@index');
@@ -112,6 +109,6 @@ Route::post('ensyu1/update', 'Ensyu1Controller@update');
 Route::get('ensyu1/del', 'Ensyu1Controller@del');
 Route::post('ensyu1/remove', 'Ensyu1Controller@remove');
 
-
-
->>>>>>> jissyu5
+//jissyu6_1
+Route::get('jissyu13', 'Jissyu6_1Controller@index');
+Route::post('jissyu13/find', 'Jissyu6_1Controller@find');
