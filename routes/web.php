@@ -17,8 +17,13 @@ Route::get('/', function () {
 return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
+ //---------認証----------
+ Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
+
  //---------トップページ----------
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')
+        ->middleware('auth');
 Route::post('hello', 'HelloController@post');
 
  //---------データの挿入----------
@@ -75,3 +80,6 @@ Route::post('jissyu4', 'Jissyu3_2Controller@post');
 
 
     
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
