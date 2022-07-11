@@ -18,8 +18,13 @@ return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
 //----------トップページの表示-----------
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')
+->middleware('auth');
 Route::post('hello', 'HelloController@post');
+
+//----------ログイン処理-----------
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
 
 //----------データの挿入-----------
 Route::get('hello/add', 'HelloController@add');
@@ -83,3 +88,7 @@ Route::get('hello/rest', 'HelloController@rest');
 //セッションの利用
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
