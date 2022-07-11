@@ -438,6 +438,7 @@ class ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94
         'App\\Http\\Controllers\\Jissyu3_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_2Controller.php',
         'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
         'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
+        'App\\Http\\Controllers\\RestappController' => __DIR__ . '/../..' . '/app/Http/Controllers/RestappController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',

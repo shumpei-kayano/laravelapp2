@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\Jissyu3_2Controller' => $baseDir . '/app/Http/Controllers/Jissyu3_2Controller.php',
     'App\\Http\\Controllers\\JissyuController' => $baseDir . '/app/Http/Controllers/JissyuController.php',
     'App\\Http\\Controllers\\PersonController' => $baseDir . '/app/Http/Controllers/PersonController.php',
+    'App\\Http\\Controllers\\RestappController' => $baseDir . '/app/Http/Controllers/RestappController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
