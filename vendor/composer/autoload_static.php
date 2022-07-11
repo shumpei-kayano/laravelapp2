@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
+class ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -421,6 +421,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
     );
 
     public static $classMap = array (
+        'App\\Board' => __DIR__ . '/../..' . '/app/Board.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Composers\\HelloComposer' => __DIR__ . '/../..' . '/app/Http/Composers/HelloComposer.php',
@@ -430,6 +431,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\BoardController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HelloController' => __DIR__ . '/../..' . '/app/Http/Controllers/HelloController.php',
         'App\\Http\\Controllers\\Jissyu3_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu3_1Controller.php',
@@ -454,6 +456,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\HelloServiceProvider' => __DIR__ . '/../..' . '/app/Providers/HelloServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Restdata' => __DIR__ . '/../..' . '/app/Restdata.php',
         'App\\Rules\\Myrule' => __DIR__ . '/../..' . '/app/Rules/Myrule.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -3786,6 +3789,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'RestdataTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RestdataTableSeeder.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -4876,10 +4880,10 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$classMap;
 
         }, null, ClassLoader::class);
     }
