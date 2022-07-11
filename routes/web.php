@@ -69,4 +69,17 @@ Route::post('jissyu3', 'Jissyu3_1Controller@post');
 //jissyu3_2
 Route::get('jissyu4', 'Jissyu3_2Controller@index');
 Route::post('jissyu4', 'Jissyu3_2Controller@post');
-    
+
+//---------Restful-----------
+Route::get('rest', 'RestappController@index');
+Route::get('rest/create', 'RestappController@create');
+Route::post('rest', 'RestappController@store');
+Route::get('rest/{id}', 'RestappController@show');
+Route::get('rest/{id}/edit', 'RestappController@edit');
+Route::put('rest/{id}', 'RestappController@update');
+Route::delete('rest/{id}', 'RestappController@destroy');
+Route::get('hello/rest', 'HelloController@rest');
+
+//セッションの利用
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
