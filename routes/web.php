@@ -18,8 +18,13 @@ return view('welcome');
         //　　↑resources/views/welcome.blade.phpのこと！
 });
 //----------トップページの表示-----------
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')
+->middleware('auth');
 Route::post('hello', 'HelloController@post');
+
+//----------ログイン処理-----------
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
 
 //----------データの挿入-----------
 Route::get('hello/add', 'HelloController@add');
@@ -138,3 +143,22 @@ Route::get('task', 'TaskController@index');
 Route::get('task/add', 'TaskController@add');
 Route::post('task/add', 'TaskController@create');
 Route::post('task/del', 'TaskController@delete');
+
+//---------Restful-----------
+Route::get('rest', 'RestappController@index');
+Route::get('rest/create', 'RestappController@create');
+Route::post('rest', 'RestappController@store');
+Route::get('rest/{id}', 'RestappController@show');
+Route::get('rest/{id}/edit', 'RestappController@edit');
+Route::put('rest/{id}', 'RestappController@update');
+Route::delete('rest/{id}', 'RestappController@destroy');
+Route::get('hello/rest', 'HelloController@rest');
+
+//セッションの利用
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

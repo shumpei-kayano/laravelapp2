@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
+class ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -104,6 +104,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\CommonMark\\' => 18,
+            'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
         ),
         'J' => 
@@ -325,6 +326,10 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
+        'Laravel\\Ui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/ui/src',
+        ),
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
@@ -447,7 +452,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Http\\Controllers\\Jissyu6_5Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Jissyu6_5Controller.php',
         'App\\Http\\Controllers\\JissyuController' => __DIR__ . '/../..' . '/app/Http/Controllers/JissyuController.php',
         'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
-        'App\\Http\\Controllers\\TaskController' => __DIR__ . '/../..' . '/app/Http/Controllers/TaskController.php',
+        'App\\Http\\Controllers\\RestappController' => __DIR__ . '/../..' . '/app/Http/Controllers/RestappController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -469,6 +474,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\HelloServiceProvider' => __DIR__ . '/../..' . '/app/Providers/HelloServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Restdata' => __DIR__ . '/../..' . '/app/Restdata.php',
         'App\\Rules\\Myrule' => __DIR__ . '/../..' . '/app/Rules/Myrule.php',
         'App\\Task' => __DIR__ . '/../..' . '/app/Task.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
@@ -2284,6 +2290,13 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laravel\\Ui\\AuthCommand' => __DIR__ . '/..' . '/laravel/ui/src/AuthCommand.php',
+        'Laravel\\Ui\\Presets\\Bootstrap' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Bootstrap.php',
+        'Laravel\\Ui\\Presets\\Preset' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Preset.php',
+        'Laravel\\Ui\\Presets\\React' => __DIR__ . '/..' . '/laravel/ui/src/Presets/React.php',
+        'Laravel\\Ui\\Presets\\Vue' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Vue.php',
+        'Laravel\\Ui\\UiCommand' => __DIR__ . '/..' . '/laravel/ui/src/UiCommand.php',
+        'Laravel\\Ui\\UiServiceProvider' => __DIR__ . '/..' . '/laravel/ui/src/UiServiceProvider.php',
         'League\\CommonMark\\Block\\Element\\AbstractBlock' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/AbstractBlock.php',
         'League\\CommonMark\\Block\\Element\\AbstractStringContainerBlock' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/AbstractStringContainerBlock.php',
         'League\\CommonMark\\Block\\Element\\BlockQuote' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/BlockQuote.php',
@@ -3803,6 +3816,7 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'RestdataTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RestdataTableSeeder.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -4894,10 +4908,10 @@ class ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf54aab18cccaf1f201a5314a187c8e55::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3bd46f5beedd287a01d5996b69acbc94::$classMap;
 
         }, null, ClassLoader::class);
     }
